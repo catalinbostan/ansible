@@ -207,7 +207,7 @@ files:
   $modules/network/aireos/: jmighion
   $modules/network/aos/: dgarros jeremyschulman
   $modules/network/aruba/: jmighion
-  $modules/network/asa/: ogenstad
+  $modules/network/asa/: ogenstad gdpak
   $modules/network/avi/: $team_avi
   $modules/network/bigswitch/: jayakody tedelhourani vuile
   $modules/network/citrix/netscaler.py: $team_ansible
@@ -249,6 +249,7 @@ files:
     ignored: stygstra
     maintainers: $team_networking
   $modules/network/ordnance/: alexanderturner djh00t
+  $modules/network/opx/: $team_dell
   $modules/network/ovs/:
     ignored: stygstra
     maintainers: rcarrillocruz
@@ -354,7 +355,7 @@ files:
   $modules/windows/:
     maintainers: $team_windows
     ignored: angstwad georgefrank h0nIg
-  $modules/windows/win_security_policy.py: rndmh3ro defionscode
+  $modules/windows/win_security_policy.py: defionscode
   bin/ansible-connection:
     keywords:
     - persistent connection
@@ -466,7 +467,7 @@ files:
     maintainers: jmighion
     labels: networking
   $module_utils/network/asa:
-    maintainers: ogenstad
+    maintainers: ogenstad gdpak
     labels: networking
   $module_utils/network/avi:
     maintainers: $team_avi
@@ -607,7 +608,7 @@ files:
     - role dep
     - role dependency
   lib/ansible/plugins/action/asa:
-    maintainers: ogenstad
+    maintainers: ogenstad gdpak
     labels: networking
   lib/ansible/plugins/action/aireos:
     maintainers: jmighion
@@ -758,7 +759,7 @@ files:
     maintainers: jmighion
     labels: networking
   lib/ansible/plugins/terminal/asa.py:
-    maintainers: ogenstad
+    maintainers: ogenstad gdpak
     labels: networking
   lib/ansible/plugins/terminal/dellos10:
     maintainers: skg-net
@@ -894,6 +895,7 @@ macros:
   team_cloudstack: resmo dpassante
   team_cumulus: isharacomix jrrivers
   team_cyberark_conjur: jvanderhoof ryanprior
+  team_dell: skg-net manjuv1 dhivyap abirami-n
   team_extreme: bigmstone LindsayHill
   team_ipa: Nosmoht Akasurde fxfitz
   team_jboss: jairojunior wbrefvem Wolfant

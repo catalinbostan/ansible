@@ -452,8 +452,10 @@ Ansible supports dot notation and array notation for variables. Which notation s
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 The dot notation comes from Jinja and works fine for variables without special
-characters. If your variable contains dots (.), colons (:), or dashes (-) it is
-safer to use the array notation for variables.
+characters. If your variable contains dots (.), colons (:), or dashes (-), if
+a key begins and ends with two underscores, or if a key uses any of the known
+public attributes, it is safer to use the array notation. See :ref:`playbooks_variables`
+for a list of the known public attributes.
 
 .. code-block:: jinja
 
@@ -463,6 +465,13 @@ safer to use the array notation for variables.
     It is {{ temperature['Celsius']['-3'] }} outside.
 
 Also array notation allows for dynamic variable composition, see dynamic_variables_.
+
+Another problem with 'dot notation' is that some keys can cause problems because they collide with attributes and methods of python dictionaries.
+
+.. code-block:: jinja
+
+    item.update # this breaks if item is a dictionary, as 'update()' is a python method for dictionaries
+    item['update'] # this works
 
 
 .. _argsplat_unsafe:
